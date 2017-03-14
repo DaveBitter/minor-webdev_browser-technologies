@@ -52,7 +52,7 @@ It's good to look at a way to not break the rest of the interface when an image 
 
 #### Working stuff
 * icons not from font
-* ![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/master/week_1/exercise_1/screenshots/fonts_4.png)
+ ![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/master/week_1/exercise_1/screenshots/fonts_4.png)
 
 #### Conclusion
 It's nice to fallback to a font from the same font-type when the fonts don't load. On my website my custom font is a Sans Serfif, my fallback font is also a Sans Serif. It surprised me that Webdesigner Depot don't have a fallback font from the same font-type. 
