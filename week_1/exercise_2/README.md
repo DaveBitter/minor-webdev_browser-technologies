@@ -17,4 +17,6 @@ It's not possible to alter the Google Maps part, but we can put layers over the 
 
 We can easily fix the icons not showing up by replacing the images for the icons with SVG's. This way you can still see the diffrence between the properties and the services. The same fix resolves the issue of the Funda logo not loading.
 
+## Tools used
+* [Images on/off](http://singleclickapps.com/images-on-off/)
 
