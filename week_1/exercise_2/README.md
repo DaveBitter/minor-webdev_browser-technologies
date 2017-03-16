@@ -4,6 +4,18 @@
 You can view the GitHub repository [here](https://github.com/DaveBitter/minor-webdev_funda). the functionality is explained in the README.MD of the repository.
 
 ## Progressive Enhancements
+Below, you can view progressive enhancements that can be added to make the website better. You can view the tools that I used while making this page at the bottom of the page.
+
+### Table of Contents
+* #images
+* #fonts
+* #javascript
+* #color
+* #broadband-internet
+* #cookies
+* #local-storage
+* #mousetrackpad
+
 ### Images
 #### Broken Stuff
 * Google Maps (visually, not the grid)
