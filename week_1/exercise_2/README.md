@@ -78,6 +78,20 @@ The website also gives feedback to the user that it's calculating the neighborho
 ### Cookies
 Nothing is broken due to disabling cookies because the website doesn't use any cookies.
 
+### Local Storage
+#### Broken Stuff
+* Calculating neigborhood-match from user settings
+* Showing service detail page
+
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/localstorage_0.png)
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/localstorage_1.png)
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/localstorage_2.png)
+
+#### Possible Solutions
+We can fix all of these issues by not relying so heavily on Local Storage (LS). Currently we save data in LS to use later on. A user browsing in an incognito window, for instance, is not able to view the service detail page. Calculating the neighborhood-match is also relying on LS. Although we use a good default when there are no preferences found in the LS, we then save that configuration to the LS. We can store everything in variables to fix this.
+
+We should use LS to rember configurations for the neigborhood-match, but not rely on it. 
+
 ## Tools used
 * [Images On/Off](https://chrome.google.com/webstore/detail/images-onoff/nfmlhilnjccdggifdbhnhkffmjgalbgg?utm_source=chrome-app-launcher-info-dialog)
 * [Web Font Block](https://chrome.google.com/webstore/detail/web-font-block/hgdahmldlgfdgnmcpjpnpofobapedikb)
