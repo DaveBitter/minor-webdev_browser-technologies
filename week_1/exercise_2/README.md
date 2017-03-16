@@ -92,6 +92,15 @@ We can fix all of these issues by not relying so heavily on Local Storage (LS). 
 
 We should use LS to rember configurations for the neigborhood-match, but not rely on it. 
 
+### Mouse/Trackpad
+#### Broken Stuff
+* Nothing
+
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/mouse_trackpad_0.png)
+
+#### Working Stuff
+You can tab throughout the entire website. On the map you can use the arrow-keys to navigate. On the preferences page you can also tab through the inputs and change the value with the arrow-keys.
+
 ## Tools used
 * [Images On/Off](https://chrome.google.com/webstore/detail/images-onoff/nfmlhilnjccdggifdbhnhkffmjgalbgg?utm_source=chrome-app-launcher-info-dialog)
 * [Web Font Block](https://chrome.google.com/webstore/detail/web-font-block/hgdahmldlgfdgnmcpjpnpofobapedikb)
