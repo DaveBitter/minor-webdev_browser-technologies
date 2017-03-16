@@ -75,6 +75,9 @@ The map shows the section that are loaded without having to wait for all the oth
 
 The website also gives feedback to the user that it's calculating the neighborhood-match. This even gives te illusion that the calculation is done very toroughly when it takes a bit of time.
 
+### Cookies
+Nothing is broken due to disabling cookies because the website doesn't use any cookies.
+
 ## Tools used
 * [Images On/Off](https://chrome.google.com/webstore/detail/images-onoff/nfmlhilnjccdggifdbhnhkffmjgalbgg?utm_source=chrome-app-launcher-info-dialog)
 * [Web Font Block](https://chrome.google.com/webstore/detail/web-font-block/hgdahmldlgfdgnmcpjpnpofobapedikb)
