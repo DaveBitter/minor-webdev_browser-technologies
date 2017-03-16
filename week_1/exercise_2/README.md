@@ -7,14 +7,14 @@ You can view the GitHub repository [here](https://github.com/DaveBitter/minor-we
 Below, you can view progressive enhancements that can be added to make the website better. You can view the tools that I used while making this page at the bottom of the page.
 
 ### Table of Contents
-* #images
-* #fonts
-* #javascript
-* #color
-* #broadband-internet
-* #cookies
-* #local-storage
-* #mousetrackpad
+* [Images](#images)
+* [Fonts](#fonts)
+* [Javascript](#javascript)
+* [Color](#color)
+* [Broadband Internet](#broadband-internet)
+* [Cookies](#cookies)
+* [Local Storage](#local-storage)
+* [Mouse/Trackpad](#mousetrackpad)
 
 ### Images
 #### Broken Stuff
