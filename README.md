@@ -1,7 +1,7 @@
 # Minor WebDev | Browser Technolgies
 Dave Bitter | 500710907
 
-    V 0.0.9
+    V 1.0.0
 
 ## General
 This repository holds the seperate exercises for the course 'Browser Technolgies', part of the minor "Webdevelopment" at the [HvA](http://www.hva.nl/)
