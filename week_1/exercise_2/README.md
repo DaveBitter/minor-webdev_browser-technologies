@@ -31,7 +31,25 @@ We could have a fallback for when this happens, but it's probably not the best f
 #### Working Stuff
 The fallback for the custom font is from the same font-type. Because of this, the website doesn't look very different.
 
+### Javascript
+#### Broken Stuff
+* Routing
+* Connecting to API
+* Building up HTML
+* Google Maps
+
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/javascript_0.png)
+
+#### Possible Solutions
+In order to build an single page app (SPA) we used Javascript (JS). We could either ditch the SPA part and build a more traditional way of displaying content like different HTML pages. We could also use [the :target selector](https://developer.mozilla.org/nl/docs/Web/CSS/:target) to try to build SPA functionality. This is kind of hacky so we would better of going for the traditional way of routing. 
+
+We can fix the connecting to the API by migrating the API part to the server side. This way, we can still provide the user with some functionality like getting the information for the properties and services.
+
+The building of the HTML currently is done with JS. We could migrate this to the server side too. This way, we can still provide the user with information for the properties and services.
+
+The Google Maps part is not in our control. We basically use their JS code to have a functioning map.
+
 ## Tools used
 * [Images On/Off](https://chrome.google.com/webstore/detail/images-onoff/nfmlhilnjccdggifdbhnhkffmjgalbgg?utm_source=chrome-app-launcher-info-dialog)
 * [Web Font Block](https://chrome.google.com/webstore/detail/web-font-block/hgdahmldlgfdgnmcpjpnpofobapedikb)
-
+* [Quick Javascript Switcher](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje)
