@@ -49,7 +49,17 @@ The building of the HTML currently is done with JS. We could migrate this to the
 
 The Google Maps part is not in our control. We basically use their JS code to have a functioning map.
 
+### Color
+#### Broken Stuff
+* Nothing
+
+![alt tag](https://raw.githubusercontent.com/DaveBitter/minor-webdev_browser-technologies/develop/week_1/exercise_2/screenshots/color_0.png)
+
+#### Working Stuff
+Because the website uses very different colors the site performs wel for people who are colorblind. The orange, blue and gray have enough distinguishment between eachother.
+
 ## Tools used
 * [Images On/Off](https://chrome.google.com/webstore/detail/images-onoff/nfmlhilnjccdggifdbhnhkffmjgalbgg?utm_source=chrome-app-launcher-info-dialog)
 * [Web Font Block](https://chrome.google.com/webstore/detail/web-font-block/hgdahmldlgfdgnmcpjpnpofobapedikb)
 * [Quick Javascript Switcher](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje)
+* [Spectrum](https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb)
