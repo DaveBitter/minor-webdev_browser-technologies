@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS_1</title>
+</head>
+<body>
+	<p>The script will check if the browser supports ECMAScript 6 and use it if supported. On unsupported the script will run ECMAScript 5.</p>
+	<p>I used this code for the check <a href="http://stackoverflow.com/questions/29046635/javascript-es6-cross-browser-detection#answer-29046739">code borrowed ;)</a></p>
+	<h1 id="message" />
+	<script>
+		function check() {
+			if (typeof SpecialObject == "undefined") return false;
+			try {
+				specialFunction();
+			} catch (e) {
+				return false;
+			}
+
+			return true;
+		}
+		if (check()) {
+			var messageElement = document.getElementById("message")
+			messageElement.innerHTML = "Your browser does not support ECMAScript 6"
+		} else {
+			const messageElement = document.getElementById("message")
+			messageElement.innerHTML = "Your browser supports ECMAScript 6"
+		}
+	</script>
+</body>
+</html>
