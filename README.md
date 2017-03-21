@@ -15,4 +15,7 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
 ### Week 1
 + [Exercise 1](week_1/exercise_1)
 + [Exercise 2](week_1/exercise_2)
++ 
+### Week 2
++ [Exercise 1](week_2/exercise_1)
 
