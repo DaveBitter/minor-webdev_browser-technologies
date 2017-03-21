@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CSS_2</title>
+	<title>CSS_0</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		.flex {
+			width: 100%;
+		}
+
+		.flex > div {
+			float: left;
+			width: 29.22%;
+			padding: 2em;
+		}
+
+		.flex > div:nth-child(1n) {
+			background-color: red;
+		}
+
+		.flex > div:nth-child(2n) {
+			background-color: green;
+		}
+
+		.flex > div:nth-child(3n) {
+			background-color: blue;
+		}
+
+		@supports(display: flex) {
+			.flex {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.flex > div {
+				flex-grow: 1;
+			}
+		}
+	</style>
 </head>
 <body>
-
+	<p>The following boxes will span across the width of the page on browsers that support flexbox. On unsupported browser the positioning will fallback to floats.</p>
+	<div class="flex">
+		<div>item_0</div>
+		<div>item_1</div>
+		<div>item_2</div>
+	</div>
 </body>
 </html>
