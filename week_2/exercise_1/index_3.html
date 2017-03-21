@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CSSL_1</title>
+	<title>CSS_1</title>
 	<style type="text/css">
+		.container {
+			background-color: red;
+		}
 
+		.container:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.container > div {
+			background-color: green;
+			padding: 2em;
+			width: 2em;
+			float: right;
+		}
+
+		@supports(display: flow-root) {
+			.container {
+				display: flow-root;
+			}
+
+			.container:after {
+				content: none;
+			}
+		}
 	</style>
 </head>
 <body>
-
+	<p>The following container will user display: flow-root; to fix the clearing on browsers that support display: flow-root;. On unsupported browser the positioning will fallback to "the old clearfix hack".</p>
+	<div class="container">
+		<div>item_0</div>
+	</div>
 </body>
 </html>
