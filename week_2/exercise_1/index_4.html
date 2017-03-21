@@ -4,6 +4,21 @@
 	<title>JS_0</title>
 </head>
 <body>
+	<p>The page will ask for the user's location and display the Latitude and Longitude on browser that support geolocation. On unsupported browser the positioning will fallback to "the old clearfix hack".</p>
+	<div id="container"></div>
 
+	<script>
+		var x = document.getElementById("container");
+
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			x.innerHTML = "<label>Latitude: <input /></label><br><label>Longttude: <input /></label>";
+		}
+
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		}
+	</script>
 </body>
 </html>
