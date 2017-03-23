@@ -19,7 +19,7 @@ A CSS fallback for when display: flow-root; isn't supported.
 ### Geolocation fallback
 A JS fallback for when geolocation isn't supported.
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_4.html)
-### ECMAScript 6 fallback
-A JS fallback for when ECMAScript 6 isn't supported.
+### Google Maps fallback
+A fallback for Google Maps when JS isn't supported.
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_5.html)
 
