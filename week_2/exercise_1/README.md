@@ -12,12 +12,13 @@ If you lookup the support for the capture attribute on an input on [caniuse.com]
 
 ## CSS
 ### Flexbox fallback
-Altough flexbox is [supported on most new browsers](http://caniuse.com/#feat=flexbox) it may not be supported on older (IE) browsers. I implemented flexbox in a way that it will 'perfect' the design in browsers that support it, but will still have decent positioning and layout in browsers that do not. I used the CSS.supports() API for this. The API is also [not supported on older browsers](http://caniuse.com/#feat=css-supports-api) so it will ignore the flexbox stuff on. 
+Altough flexbox is [supported on most new browsers](http://caniuse.com/#feat=flexbox) it may not be supported on older (IE) browsers. I implemented flexbox in a way that it will 'perfect' the design in browsers that support it, but will still have decent positioning and layout in browsers that do not. I used the CSS.supports() API for this. The API is also [not supported on older browsers](http://caniuse.com/#feat=css-supports-api) so it will ignore the flexbox stuff on them. 
 
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_2.html)
 
 ### display: flow-root; fallback
-A CSS fallback for when display: flow-root; isn't supported.
+[Clearfix](https://css-tricks.com/snippets/css/clear-fix/) has been a hack that every front-end developer used at least once. The neater way of getting the exact result is by using ```display: flow-root;```. I used a fallback to the clearfix on most browsers since this is [not supported on most browsers](http://caniuse.com/#feat=flow-root). I used the CSS.supports() API for this. The API is [not supported on older browsers](http://caniuse.com/#feat=css-supports-api) so it will ignore the ```display:flow-root;``` stuff on them. 
+
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_3.html)
 
 ## JS
