@@ -17,15 +17,18 @@ Altough flexbox is [supported on most new browsers](http://caniuse.com/#feat=fle
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_2.html)
 
 ### display: flow-root; fallback
-[Clearfix](https://css-tricks.com/snippets/css/clear-fix/) has been a hack that every front-end developer used at least once. The neater way of getting the exact result is by using ```display: flow-root;```. I used a fallback to the clearfix on most browsers since this is [not supported on most browsers](http://caniuse.com/#feat=flow-root). I used the CSS.supports() API for this. The API is [not supported on older browsers](http://caniuse.com/#feat=css-supports-api) so it will ignore the ```display:flow-root;``` stuff on them. 
+[Clearfix](https://css-tricks.com/snippets/css/clear-fix/) has been a hack that every front-end developer used at least once. The neater way of getting exactly the same result is by using ```display: flow-root;```. I used a fallback to the clearfix on most browsers since this is [not supported on most browsers](http://caniuse.com/#feat=flow-root). I used the CSS.supports() API for this. The API is [not supported on older browsers](http://caniuse.com/#feat=css-supports-api) so it will ignore the ```display:flow-root;``` stuff on them. 
 
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_3.html)
 
 ## JS
 ### Geolocation fallback
-A JS fallback for when geolocation isn't supported.
+Getting a user's geolocation from navigator through JS is well supported on most browsers. On some olders browsers and Opera mini for instance [this feature is not supported](http://caniuse.com/#search=geolocation). In order to still get peoples latitude and longitude two inputs are shown when on those browsers. This way, the feature enriches the experience but is'nt the only way of inputting the latitude en longitude. From a UX standpoint this fix is tougher to sell. A nice alternative is letting people do a serverside request for the latitude and longitude of a user's city for instance.
+
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_4.html)
+
 ### Google Maps fallback
-A fallback for Google Maps when JS isn't supported.
+Often times you see a Google Maps map with a company's location on a website. This is nice to have beacus user's can look around in the area, zoom in and out etc. User's without JS will see a blank container since the map soley runs on JS. A fallback for this is showing an image of the map by default in HTML and replace that map with a Google Maps map in JS.
+
 [Link to page](http://webdev.davebitter.com/exercises/bt/week_2/index_5.html)
 
