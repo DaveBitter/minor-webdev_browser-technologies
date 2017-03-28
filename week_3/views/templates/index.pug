@@ -3,8 +3,8 @@ extends ../layout.pug
 block content
 	section
 		h1 Contacts
-		form#search(action="/search", method="post")
-			input(type="text", name="query", placeholder="Search for name...")
+		form#search(action="/", method="post")
+			input(type="text", name="query", value=""+query, placeholder="Search for name...")
 			input(type="submit")
 		ul#person-list
 			each person in persons
@@ -12,3 +12,5 @@ block content
 					a(href="/person/" + person._id)
 						img(src=""+person.avatar)
 						span=person.name
+			else
+				p#message No Results
