@@ -13,4 +13,14 @@ router.get('/:id', (req, res) => {
 	res.render('templates/detail', {person})
 })
 
+router.get('/:id/api', (req, res) => {
+	const id = req.params.id
+
+	const person = persons.find(function(result) {
+		return result._id == id
+	});
+
+	res.send(person)
+})
+
 module.exports = router;
