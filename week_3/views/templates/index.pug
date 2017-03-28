@@ -9,7 +9,7 @@ block content
 		ul#person-list
 			each person in persons
 				li
-					a(href="/person/" + person._id, id=person._id)
+					a(href="/person/" + person._id, id=person._id, data-open="false")
 						img(src=""+person.avatar)
 						span=person.name
 			else

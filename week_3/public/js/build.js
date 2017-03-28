@@ -7,18 +7,45 @@ elements = {
 
 interceptLinks(elements.links)
 
-},{"./interceptLinks.js":3}],2:[function(require,module,exports){
+},{"./interceptLinks.js":4}],2:[function(require,module,exports){
+var buildInfo = function(data) {
+	var template = [
+		'<dl>',
+		'<dt>Company</dt>',
+		'<dd>' + data.company + '</dd>',
+		'<dt>Phone</dt>',
+		'<dd>' + data.phone + '</dd>',
+		'<dt>Address</dt>',
+		'<dd>' + data.adrress + '</dd>',
+		'</dl>'
+	].join("\n");
+	return template
+}
+
+module.exports = buildInfo
+},{}],3:[function(require,module,exports){
+var buildInfo = require('./buildInfo.js')
+
 var getData = function(target) {
 	var id = target.id
 	// do api call
 	aja().url('/person/' + id + '/api').on('success', function(data) {
 		console.log(data)
+		if(target.dataset.open == "true") {
+			var ul = target.childNodes == "ul"
+			console.log(ul)
+			ul.innerHTML = ""
+		} else {
+			target.dataset.open = "true"
+			target.innerHTML += buildInfo(data)
+
+		}
 	}).go();
 	// return the data
 }
 
 module.exports = getData
-},{}],3:[function(require,module,exports){
+},{"./buildInfo.js":2}],4:[function(require,module,exports){
 var getData = require('./getData.js')
 
 function interceptLinks(links) {
@@ -31,4 +58,4 @@ function interceptLinks(links) {
 }
 
 module.exports = interceptLinks
-},{"./getData.js":2}]},{},[1]);
+},{"./getData.js":3}]},{},[1]);
