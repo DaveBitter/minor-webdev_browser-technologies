@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block content
+	section
+		h1 Contacts
+		form#search(action="/search", method="post")
+			input(type="text", name="query", placeholder="Search for name...")
+			input(type="submit")
+		ul#person-list
+			each person in persons
+				li
+					a(href="/person/" + person._id)
+						img(src=""+person.avatar)
+						span=person.name

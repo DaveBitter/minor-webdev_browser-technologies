@@ -1,0 +1,18 @@
+extends ../layout.pug
+
+block content
+	section
+		img(src=""+person.picture)
+		h1=person.name
+		dl
+			dt Company
+			dd=person.company
+			dt Phone
+			dd=person.phone
+			dt Address
+			dd=person.address
+			dt Registered
+			dd=person.registered
+
+		h2 About
+		p=person.about

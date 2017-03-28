@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block content
+	section
+		h1 Results
+		form#search(action="/search", method="post")
+			input(type="text", name="query", value=""+query, placeholder="Search for name...")
+			input(type="submit")
+		ul#person-list
+			each result in results
+				li
+					a(href="/person/" + result._id)
+						img(src=""+result.avatar)
+						span=result.name
+			else
+				p#message No results found
