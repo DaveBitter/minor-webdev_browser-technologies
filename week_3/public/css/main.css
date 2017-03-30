@@ -1,0 +1,91 @@
+body {
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+
+section {
+	max-width: 30em;
+}
+
+#person-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+#person-list li {
+	margin: 0;
+	border-bottom: .1em solid #ddd;
+}
+
+#person-list img {
+	padding-right: 1em;
+	border-radius: 100%;
+}
+
+#person-list a {
+	display: block;
+	padding: 1em;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+#person-list a:hover, #person-list a:focus {
+	background-color: #f1f1f1;
+}
+
+#message {
+	text-align: center;
+	color: #666;
+	margin-top: 3em;
+}
+
+#info button {
+	display: block;
+	width: 100%;
+	background-color: blue;
+	color: #fff;
+	border: none;
+	padding: 1em;
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: #333;
+}
+
+form#search {
+	display: block;
+}
+
+form#search > input {
+	padding: 1em;
+}
+
+form#search input[type="text"] {
+	width: 80%;
+}
+
+form#search input[type="submit"] {
+	width: 20%;
+}
+
+dl {
+	background-color: #f1f1f1;
+	padding: 1em;
+}
+
+dt {
+	margin: 1em 0 .5em;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: .5em;
+}
