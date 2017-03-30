@@ -1,13 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var interceptLinks = require('./interceptLinks.js')
+var search = require('./search.js')
 
 elements = {
 	links: document.querySelectorAll('#person-list a')
 }
 
+search(elements.links)
 interceptLinks(elements.links)
 
-},{"./interceptLinks.js":4}],2:[function(require,module,exports){
+},{"./interceptLinks.js":4,"./search.js":5}],2:[function(require,module,exports){
 var buildInfo = function(data) {
 	console.log(data)
 	var template = [
@@ -36,7 +38,6 @@ var getData = function(target) {
 	var id = target.id
 	// do api call
 	aja().url('/person/' + id + '/api').on('success', function(data) {
-		console.log("comin in: ", target.dataset.open)
 		if(target.dataset.open == 'true') {
 			var info = document.getElementById('info')
 			info.parentElement.removeChild(info)
@@ -64,4 +65,30 @@ function interceptLinks(links) {
 }
 
 module.exports = interceptLinks
-},{"./getData.js":3}]},{},[1]);
+},{"./getData.js":3}],5:[function(require,module,exports){
+function search(items) {
+	var searchBox = document.getElementById('search-box')
+	var searchButton = document.getElementById('search-button')
+
+	searchBox.style.width = '100%'
+	searchButton.style.display = 'none'
+
+	searchBox.addEventListener('keyup', function(e) {
+		if (e.keyCode == 13) {
+			e.preventDefault();
+		}
+
+		for (i = 0; i < items.length; i++) {
+			var name = items[i].childNodes[1].innerHTML
+			if (name.toLowerCase().includes(e.target.value)) {
+				items[i].parentNode.style.display = 'block'
+			} else {
+				items[i].parentNode.style.display = 'none'
+			}
+		}
+
+	})
+}
+
+module.exports = search
+},{}]},{},[1]);

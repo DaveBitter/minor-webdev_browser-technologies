@@ -4,8 +4,8 @@ block content
 	section
 		h1 Contacts
 		form#search(action="/", method="post")
-			input(type="text", name="query", value=""+query, placeholder="Search for name...")
-			input(type="submit")
+			input#search-box(type="text", name="query", value=""+query, placeholder="Search for name...")
+			input#search-button(type="submit")
 		ul#person-list
 			each person in persons
 				li

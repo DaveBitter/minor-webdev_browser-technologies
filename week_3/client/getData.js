@@ -4,7 +4,6 @@ var getData = function(target) {
 	var id = target.id
 	// do api call
 	aja().url('/person/' + id + '/api').on('success', function(data) {
-		console.log("comin in: ", target.dataset.open)
 		if(target.dataset.open == 'true') {
 			var info = document.getElementById('info')
 			info.parentElement.removeChild(info)
