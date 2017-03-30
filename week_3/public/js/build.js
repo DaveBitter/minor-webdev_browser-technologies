@@ -1,6 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var interceptLinks = require('./interceptLinks.js')
 var search = require('./search.js')
+var tiltjs = require('./tilt.js')
 
 elements = {
 	links: document.querySelectorAll('#person-list a')
@@ -8,8 +9,8 @@ elements = {
 
 search(elements.links)
 interceptLinks(elements.links)
-
-},{"./interceptLinks.js":4,"./search.js":5}],2:[function(require,module,exports){
+tiltjs()
+},{"./interceptLinks.js":4,"./search.js":5,"./tilt.js":6}],2:[function(require,module,exports){
 var buildInfo = function(data) {
 	console.log(data)
 	var template = [
@@ -91,4 +92,24 @@ function search(items) {
 }
 
 module.exports = search
+},{}],6:[function(require,module,exports){
+var tiltjs = function() {
+	if (window.DeviceOrientationEvent) {
+		var y = 0;
+
+		window.addEventListener('devicemotion', function(e) {
+			if (y - e.accelerationIncludingGravity.y > 2) {
+				document.querySelectorAll('#info').forEach(function(el) {
+					console.log(el)
+					el.parentElement.dataset.open = 'false'
+					el.parentElement.removeChild(el)
+				})
+			}
+			y = e.accelerationIncludingGravity.y
+		}, true);
+
+	}
+}
+
+module.exports = tiltjs
 },{}]},{},[1]);
