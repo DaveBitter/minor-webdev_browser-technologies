@@ -5,7 +5,6 @@ var tiltjs = function() {
 		window.addEventListener('devicemotion', function(e) {
 			if (y - e.accelerationIncludingGravity.y > 2) {
 				document.querySelectorAll('#info').forEach(function(el) {
-					console.log(el)
 					el.parentElement.dataset.open = 'false'
 					el.parentElement.removeChild(el)
 				})

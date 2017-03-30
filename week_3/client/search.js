@@ -12,7 +12,8 @@ function search(items) {
 
 		for (i = 0; i < items.length; i++) {
 			var name = items[i].childNodes[1].innerHTML
-			if (name.toLowerCase().includes(e.target.value)) {
+
+			if (name.toLowerCase().search(e.target.value) !== -1) {
 				items[i].parentNode.style.display = 'block'
 			} else {
 				items[i].parentNode.style.display = 'none'

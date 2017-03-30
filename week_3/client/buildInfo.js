@@ -1,5 +1,4 @@
 var buildInfo = function(data) {
-	console.log(data)
 	var template = [
 		'<div id="info">',
 		'<dl>',

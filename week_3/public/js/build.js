@@ -12,7 +12,6 @@ interceptLinks(elements.links)
 tiltjs()
 },{"./interceptLinks.js":4,"./search.js":5,"./tilt.js":6}],2:[function(require,module,exports){
 var buildInfo = function(data) {
-	console.log(data)
 	var template = [
 		'<div id="info">',
 		'<dl>',
@@ -81,7 +80,8 @@ function search(items) {
 
 		for (i = 0; i < items.length; i++) {
 			var name = items[i].childNodes[1].innerHTML
-			if (name.toLowerCase().includes(e.target.value)) {
+
+			if (name.toLowerCase().search(e.target.value) !== -1) {
 				items[i].parentNode.style.display = 'block'
 			} else {
 				items[i].parentNode.style.display = 'none'
@@ -100,7 +100,6 @@ var tiltjs = function() {
 		window.addEventListener('devicemotion', function(e) {
 			if (y - e.accelerationIncludingGravity.y > 2) {
 				document.querySelectorAll('#info').forEach(function(el) {
-					console.log(el)
 					el.parentElement.dataset.open = 'false'
 					el.parentElement.removeChild(el)
 				})
