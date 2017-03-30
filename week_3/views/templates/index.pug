@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block content
+	section
+		h1 Contacts
+		form#search(action="/", method="post")
+			input#search-box(type="text", name="query", value=""+query, placeholder="Search for name...")
+			input#search-button(type="submit")
+		ul#person-list
+			each person in persons
+				li
+					a.person-list-link(href="/person/" + person._id, id=person._id, data-open="false")
+						img(src=""+person.avatar)
+						span=person.name
+			else
+				p#message No Results
